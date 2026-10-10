@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLXBank Secure Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>CLXBank Secure Login</h1>
+  <div id="msg">Welcome</div>
+
+  <section class="card" id="s-login">
+    <h2>Log in (step 1 of 2)</h2>
+    <input id="lu" placeholder="Username" autocomplete="username">
+    <input id="lp" type="password" placeholder="Password" autocomplete="current-password">
+    <button id="go-login">Continue</button>
+    <a id="to-reg">Create an account</a>
+  </section>
+
+  <section class="card" id="s-reg" hidden>
+    <h2>Create account</h2>
+    <input id="ru" placeholder="Username (letters, digits, _)">
+    <input id="rp" type="password" placeholder="Password (10+ chars, Aa, 1, symbol)">
+    <button id="go-reg">Register</button>
+    <div id="setup" hidden>
+      <p>Open Google/Microsoft Authenticator, choose <b>Enter a setup key</b>, type this key (time-based):</p>
+      <code id="key"></code>
+      <p class="small">Or as a link: <span id="uri"></span></p>
+    </div>
+    <a id="to-login">Back to log in</a>
+  </section>
+
+  <section class="card" id="s-2fa" hidden>
+    <h2>Two-factor code (step 2 of 2)</h2>
+    <input id="code" placeholder="6-digit code" inputmode="numeric" maxlength="10" autocomplete="one-time-code">
+    <button id="go-2fa">Verify</button>
+  </section>
+
+  <section class="card" id="s-home" hidden>
+    <h2 id="who"></h2>
+    <p id="bal"></p>
+    <button id="btn-all" hidden>View all balances (manager/admin)</button>
+    <ul id="list"></ul>
+
+    <div id="admin" hidden>
+      <h3>Administration</h3>
+      <div id="users"></div>
+      <h3>Encrypted backups (auto every 30 s and after each change)</h3>
+      <p id="backups" class="small"></p>
+      <button id="b-now">Backup now</button>
+      <button id="b-dl">Download backup file</button>
+      <button id="b-restore">Restore latest backup</button>
+      <label class="small">Restore from file: <input type="file" id="b-file" accept=".json"></label>
+      <button id="b-tamper" class="warn">Tamper test (corrupt latest backup)</button>
+      <h3>Tamper-evident audit log</h3>
+      <button id="a-verify">Verify audit log</button>
+      <pre id="audit"></pre>
+    </div>
+    <button id="logout" class="grey">Log out</button>
+  </section>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body { font-family: "Segoe UI", sans-serif; max-width: 460px; margin: 30px auto; padding: 0 16px; background: #f4f6f9; color: #1c2430; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.1rem; margin-top: 0; }
+h3 { font-size: .95rem; margin: 16px 0 6px; }
+#msg { padding: 10px; background: #e8f0fe; border-radius: 6px; margin-bottom: 8px; }
+.card { background: #fff; border: 1px solid #d5dbe3; border-radius: 10px; padding: 16px; margin: 12px 0; }
+input, button, select { width: 100%; padding: 10px; margin: 5px 0; box-sizing: border-box; font-size: 15px; }
+button { background: #1f5fbf; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+button:hover { background: #174a96; }
+button.grey { background: #6b7684; }
+button.warn { background: #b3402a; }
+a { color: #1f5fbf; cursor: pointer; text-decoration: underline; }
+code { display: block; padding: 8px; background: #f0f2f5; border-radius: 6px; font-size: 1.05rem; letter-spacing: 1px; word-break: break-all; }
+.small { font-size: .8rem; color: #555; word-break: break-all; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row span { flex: 1; }
+.row select { flex: 1; }
+pre { background: #f0f2f5; padding: 8px; border-radius: 6px; font-size: .72rem; overflow-x: auto; max-height: 160px; }
